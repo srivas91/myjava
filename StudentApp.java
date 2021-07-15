@@ -37,8 +37,8 @@ class Student implements ActionListener {
       
       lblCourse=new JLabel("Course");
       lblCourse.setBounds(100, 200, 100, 30);
-      cboCourse=new JComboBox(new Object[]{"Java","Python"});
-      cboCourse.setBounds(250, 200, 100, 30);
+      cboCourse=new JComboBox(new Object[]{"select course","Java","Python"});
+      cboCourse.setBounds(250, 200, 130, 30);
       
       panel.add(lblTitle);
       panel.add(lblId);
@@ -68,6 +68,11 @@ class Student implements ActionListener {
               String s3=(String)cboCourse.getSelectedItem();
               System.out.println("id is"+s1);
               System.out.println("course is"+s3);            
+          }
+          if(e.getSource()==btnCancel)
+          {
+              tfId.setText("");
+              tfName.setText("");
           }
     }
 }
